@@ -160,6 +160,7 @@ export function PortfolioShell() {
         )}
 
       </main>
+      <footer><span>© 2026 Sunny Mall</span><a href="https://github.com/sunnyrockk" target="_blank" rel="noreferrer">github.com/sunnyrockk</a></footer>
     </div>
   )
 }
