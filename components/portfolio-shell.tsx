@@ -32,7 +32,7 @@ function ClickableHeading({ children, level = 'h2' }: { children: string; level?
 const socials = [
   { label: 'github', href: 'https://github.com/sunnyrockk', icon: GithubMark },
   { label: 'discord', href: 'https://discord.com', icon: DiscordMark },
-  { label: 'leetcode', href: 'https://leetcode.com', icon: LeetcodeMark },
+  { label: 'leetcode', href: 'https://leetcode.com/u/Sunny_mall', icon: LeetcodeMark },
   { label: 'linkedin', href: 'https://www.linkedin.com', mark: 'in' },
   { label: 'x', href: 'https://x.com/SunnyPrata19874', mark: '𝕏' },
 ]
