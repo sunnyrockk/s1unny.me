@@ -123,7 +123,7 @@ export function PortfolioShell() {
           <section key="contributions-view" id="opensource" className="section opensource-section about-replacement">
             <div className="section-heading project-heading"><h1>open source contributions</h1><a href="#about" onClick={showAbout}>back to about →</a></div>
             <a className="opensource-card" href="https://github.com/lingdojo/kana-dojo" target="_blank" rel="noreferrer">
-              <div className="opensource-card-top"><h3>kana-dojo</h3><span className="public-badge">Public</span></div>
+              <div className="opensource-card-top"><h3 style={{ color: '#7dd3fc' }}>kana-dojo</h3><span className="public-badge">Public</span></div>
               <p className="forked-from">Forked from <u>lingdojo/kana-dojo</u></p>
               <p className="opensource-description">Aesthetic, minimalist platform for learning Japanese inspired by Duolingo and Monkeytype, built with Next.js and sponsored by Vercel. Beginner-friendly with plenty of good first issues - all contri...</p>
               <div className="opensource-meta"><span className="language-dot"></span><span>TypeScript</span><span className="star-mark">☆</span><span>1</span></div>
@@ -133,7 +133,7 @@ export function PortfolioShell() {
           <section key="projects-view" id="projects" className="section projects-section about-replacement">
             <div className="section-heading project-heading"><h1 style={{ color: accent }}>projects</h1><a href="#about" onClick={showAbout}>back to about →</a></div>
             <div className="project-list">
-              {projects.map((project, index) => <a className="project-row" href="#opensource" key={project.name}><div className="project-info"><h3 style={{ color: accent }}>{project.name}</h3><p>{project.description}</p></div><span className="language">{project.language}</span></a>)}
+              {projects.map((project, index) => <a className="project-row" href="#opensource" key={project.name}><div className="project-info"><h3 className="project-name-light-blue">{project.name}</h3><p>{project.description}</p></div><span className="language">{project.language}</span></a>)}
             </div>
           </section>
         )}
@@ -142,7 +142,7 @@ export function PortfolioShell() {
           <section className="section projects-section projects-preview home-section">
             <div className="section-heading project-heading"><h2 style={{ color: accent }}>projects</h2><a href="/projects" onClick={showProjects}>view all →</a></div>
             <div className="project-list">
-              {projects.map((project, index) => <a className="project-row" href="#opensource" key={project.name}><div className="project-info"><h3 style={{ color: accent }}>{project.name}</h3><p>{project.description}</p></div><span className="language">{project.language}</span></a>)}
+              {projects.map((project, index) => <a className="project-row" href="#opensource" key={project.name}><div className="project-info"><h3 className="project-name-light-blue">{project.name}</h3><p>{project.description}</p></div><span className="language">{project.language}</span></a>)}
             </div>
           </section>
         )}
@@ -151,7 +151,7 @@ export function PortfolioShell() {
           <section className="section opensource-section contributions-preview home-section">
             <div className="section-heading project-heading"><h2>contribution</h2><a href="#opensource" onClick={showContributions}>view all →</a></div>
             <a className="opensource-card" href="https://github.com/lingdojo/kana-dojo" target="_blank" rel="noreferrer">
-              <div className="opensource-card-top"><h3>kana-dojo</h3><span className="public-badge">Public</span></div>
+              <div className="opensource-card-top"><h3 style={{ color: '#7dd3fc' }}>kana-dojo</h3><span className="public-badge">Public</span></div>
               <p className="forked-from">Forked from <u>lingdojo/kana-dojo</u></p>
               <p className="opensource-description">Aesthetic, minimalist platform for learning Japanese inspired by Duolingo and Monkeytype, built with Next.js and sponsored by Vercel.</p>
               <div className="opensource-meta"><span className="language-dot"></span><span>TypeScript</span><span className="star-mark">☆</span><span>1</span></div>
