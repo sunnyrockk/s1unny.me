@@ -36,7 +36,7 @@ const socials = [
 ]
 
 export function PortfolioShell() {
-  const accents = ['#c084fc', '#93c5fd', '#fdba74', '#86efac', '#f9a8d4']
+  const accents = ['#fdba74', '#c084fc', '#93c5fd', '#86efac', '#f9a8d4']
   const [accentIndex, setAccentIndex] = useState(0)
   const accent = accents[accentIndex]
   const [activeView, setActiveView] = useState<'about' | 'projects' | 'contributions'>('about')
@@ -107,8 +107,10 @@ export function PortfolioShell() {
               <p>i work across the stack: web, and the occasional clis/tuis.</p>
               <p>most of what i make ends up open source.</p>
               <p>into linux, ricing my setup, and understanding how things work past the surface.</p>
-              <p>interested in what happens beneath the interface.</p>
               <p className="availability"><a href="mailto:sunnypratap859@gmail.com">open to work &lt;3</a></p>
+              <nav className="about-socials" aria-label="Social links">
+                {socials.map(({ label, href, icon: Icon, mark }) => <a key={label} href={href} aria-label={label} target={href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">{Icon ? <Icon size={25} strokeWidth={2.1} /> : <span className="social-mark">{mark}</span>}</a>)}
+              </nav>
             </div>
           </section>
         ) : activeView === 'contributions' ? (
