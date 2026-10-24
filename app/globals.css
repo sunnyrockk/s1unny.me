@@ -84,7 +84,7 @@ button { font: inherit; cursor: pointer; transition: color .25s ease, background
 .project-heading { margin-bottom: 8px; }
 .project-heading a { margin-left: auto; color: #7d8981; font-size: 12px; }
 .project-list { margin-left: 37px; }
- .project-row { display: grid; grid-template-columns: 40px 1fr auto; gap: 22px; align-items: center; padding: 32px 0; border-bottom: 1px solid rgba(134,239,172,.11); transition: padding .2s ease, color .2s ease; }
+ .project-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: start; padding: 28px 0; border-bottom: 1px solid rgba(134,239,172,.11); transition: padding .2s ease, color .2s ease; }
  .project-row:hover { padding-left: 8px; color: var(--accent); }
   .project-index { color: #66736a; font-size: 13px; }
   .project-info h3 { margin: 0 0 9px; font-size: 22px; letter-spacing: -.04em; }
