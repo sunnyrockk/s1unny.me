@@ -131,18 +131,18 @@ export function PortfolioShell() {
           </section>
         ) : (
           <section key="projects-view" id="projects" className="section projects-section about-replacement">
-            <div className="section-heading project-heading"><h1>projects</h1><a href="#about" onClick={showAbout}>back to about →</a></div>
+            <div className="section-heading project-heading"><h1 style={{ color: accent }}>projects</h1><a href="#about" onClick={showAbout}>back to about →</a></div>
             <div className="project-list">
-              {projects.map((project, index) => <a className="project-row" href="#opensource" key={project.name}><div className="project-info"><h3>{project.name}</h3><p>{project.description}</p></div><span className="language">{project.language}</span></a>)}
+              {projects.map((project, index) => <a className="project-row" href="#opensource" key={project.name}><div className="project-info"><h3 style={{ color: accent }}>{project.name}</h3><p>{project.description}</p></div><span className="language">{project.language}</span></a>)}
             </div>
           </section>
         )}
 
         {activeView === 'about' && (
           <section className="section projects-section projects-preview home-section">
-            <div className="section-heading project-heading"><h2>projects</h2><a href="/projects" onClick={showProjects}>view all →</a></div>
+            <div className="section-heading project-heading"><h2 style={{ color: accent }}>projects</h2><a href="/projects" onClick={showProjects}>view all →</a></div>
             <div className="project-list">
-              {projects.map((project, index) => <a className="project-row" href="#opensource" key={project.name}><div className="project-info"><h3>{project.name}</h3><p>{project.description}</p></div><span className="language">{project.language}</span></a>)}
+              {projects.map((project, index) => <a className="project-row" href="#opensource" key={project.name}><div className="project-info"><h3 style={{ color: accent }}>{project.name}</h3><p>{project.description}</p></div><span className="language">{project.language}</span></a>)}
             </div>
           </section>
         )}
