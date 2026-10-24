@@ -108,7 +108,8 @@ button { font: inherit; cursor: pointer; transition: color .25s ease, background
 .calendly-link:hover { background: var(--accent); color: #020305; }
 .home-section { border: 1px solid rgba(255,255,255,.28); }
 .home-section.about-section { border-bottom: 0 !important; }
-.home-section.projects-preview { margin-top: 0; padding-top: 24px; padding-bottom: 24px; border-top: 0; }
+.home-section.projects-preview { margin-top: 0; padding-top: 24px; padding-bottom: 24px; border-top: 0; border-bottom: 0; }
+.home-section.contributions-preview { margin-top: 0; border-top: 0; }
 .home-section.projects-preview .project-list { margin-left: 37px; }
 .home-section.projects-preview .project-row { padding: 18px 0; gap: 16px; }
 .home-section.projects-preview .project-info h3 { margin-bottom: 4px; font-size: 18px; }
