@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Mail } from 'lucide-react'
 
 const projects = [
@@ -38,10 +38,17 @@ const socials = [
 export function PortfolioShell() {
   const accents = ['#fdba74', '#c084fc', '#93c5fd', '#86efac', '#f9a8d4']
   const [accentIndex, setAccentIndex] = useState(0)
-  const accent = accents[accentIndex]
+  const [hasHydrated, setHasHydrated] = useState(false)
+  const accent = hasHydrated ? accents[accentIndex] : accents[0]
+  const secondaryAccent = hasHydrated ? accents[(accentIndex + 1) % accents.length] : accents[1]
   const [activeView, setActiveView] = useState<'about' | 'projects' | 'contributions'>('about')
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
   const [pointer, setPointer] = useState({ x: 50, y: 50 })
+
+  useEffect(() => {
+    setHasHydrated(true)
+  }, [])
+
   const handlePointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
     setPointer({ x: (event.clientX / window.innerWidth) * 100, y: (event.clientY / window.innerHeight) * 100 })
   }
@@ -64,7 +71,7 @@ export function PortfolioShell() {
   }
 
   return (
-    <div className="site-shell theme-dark" onPointerMove={handlePointerMove} style={{ '--accent': accent, '--matrix-primary': accent, '--matrix-secondary': accents[(accentIndex + 1) % accents.length], '--pointer-x': `${pointer.x}%`, '--pointer-y': `${pointer.y}%` } as React.CSSProperties}>
+    <div className="site-shell theme-dark" onPointerMove={handlePointerMove} style={{ '--accent': accent, '--matrix-primary': accent, '--matrix-secondary': secondaryAccent, '--pointer-x': `${pointer.x}%`, '--pointer-y': `${pointer.y}%` } as React.CSSProperties}>
       <div className="matrix-bg" aria-hidden="true" />
       <main className="portfolio">
         <header className="topbar">
