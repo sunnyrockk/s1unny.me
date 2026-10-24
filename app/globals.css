@@ -20,8 +20,8 @@ button { font: inherit; cursor: pointer; transition: color .25s ease, background
 @keyframes particle-shift { from { transform: translate3d(-2%, -1%, 0) scale(1); background-position: 0 0, 0 0; } to { transform: translate3d(3%, 2%, 0) scale(1.08); background-position: 38px -26px, 0 0; } }
 @keyframes shimmer { from { filter: brightness(.7); } to { filter: brightness(1.35); } }
 @media (prefers-reduced-motion: reduce) { .matrix-bg, .matrix-bg::before, .matrix-bg::after, .about-section, .projects-section { animation: none; } a, button { transition-duration: .01ms; } }
-.portfolio { position: relative; z-index: 1; width: min(990px, calc(100% - 32px)); margin: 65px auto 80px; border: 0; border-radius: 0; background: rgba(7,4,13,.72); box-shadow: none; }
-.theme-light .portfolio { background: rgba(244,250,245,.83); box-shadow: none; }
+.portfolio { position: relative; z-index: 1; width: min(990px, calc(100% - 32px)); margin: 65px auto 80px; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.theme-light .portfolio { background: transparent; box-shadow: none; }
 .topbar { position: relative; z-index: 1; min-height: 84px; padding: 16px 24px; border: 1px solid rgba(255,255,255,.28); display: flex; justify-content: space-between; align-items: center; gap: 18px; background: rgba(0,0,0,.82); backdrop-filter: none; }
 .identity { display: flex; align-items: center; gap: 15px; }
 .avatar { width: 58px; height: 58px; display: grid; place-items: center; overflow: hidden; border: 1px solid var(--accent); color: #031008; background: var(--accent); font-size: 15px; font-weight: 700; letter-spacing: -.08em; }
