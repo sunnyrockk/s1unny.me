@@ -1,8 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Mail } from 'lucide-react'
-
 const projects = [
   { name: 'orbit', language: 'typescript', description: 'a calm command center for tracking ideas, experiments, and launches' },
   { name: 'relay', language: 'python', description: 'a tiny terminal tool for turning repetitive workflows into one clean command' },
@@ -29,8 +27,6 @@ function ClickableHeading({ children, level = 'h2' }: { children: string; level?
 
 const socials = [
   { label: 'github', href: 'https://github.com/sunnyrockk', icon: GithubMark },
-  { label: 'leetcode', href: 'https://leetcode.com/u/Sunny_mall', icon: LeetcodeMark },
-  { label: 'email', href: 'mailto:sunnypratap859@gmail.com', icon: Mail },
   { label: 'linkedin', href: 'https://www.linkedin.com', mark: 'in' },
   { label: 'x', href: 'https://x.com/SunnyPrata19874', mark: '𝕏' },
 ]
@@ -114,7 +110,7 @@ export function PortfolioShell() {
               <p>i work across the stack: web, and the occasional clis/tuis.</p>
               <p>most of what i make ends up open source.</p>
               <p>into linux, ricing my setup, and understanding how things work past the surface.</p>
-              <p className="availability"><a href="mailto:sunnypratap859@gmail.com">open to work &lt;3</a></p>
+              <div className="availability"><a href="https://leetcode.com/u/Sunny_mall" aria-label="LeetCode" target="_blank" rel="noreferrer"><LeetcodeMark size={25} /></a><a href="mailto:sunnypratap859@gmail.com">open to work &lt;3</a></div>
               <nav className="about-socials" aria-label="Social links">
                 {socials.map(({ label, href, icon: Icon, mark }) => <a key={label} href={href} aria-label={label} target={href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">{Icon ? <Icon size={25} strokeWidth={2.1} /> : <span className="social-mark">{mark}</span>}</a>)}
               </nav>

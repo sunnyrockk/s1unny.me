@@ -78,9 +78,11 @@ button { font: inherit; cursor: pointer; transition: color .25s ease, background
 .about-socials a:hover { transform: translateY(-2px); }
 .theme-light .about-copy, .theme-light .project-info p, .theme-light .contact-section > p { color: #536257; }
 .about-copy p { margin: 0 0 16px; }
-.availability { margin-top: 25px !important; }
-.availability a { color: var(--accent); border-bottom: 1px dashed var(--accent); }
-.availability span { color: var(--accent); }
+.availability { margin-top: 25px !important; display: flex; align-items: center; gap: 14px; }
+  .availability a { color: var(--accent); border-bottom: 1px dashed var(--accent); }
+  .availability a:first-child { border-bottom: 0; display: grid; place-items: center; }
+  .availability a:first-child:hover { transform: translateY(-2px); }
+  .availability span { color: var(--accent); }
 .project-heading { margin-bottom: 8px; }
 .project-heading a { margin-left: auto; color: #7d8981; font-size: 12px; }
 .project-list { margin-left: 37px; }
