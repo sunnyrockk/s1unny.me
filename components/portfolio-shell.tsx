@@ -38,7 +38,7 @@ const socials = [
 ]
 
 export function PortfolioShell() {
-  const accents = ['#fdba74', '#c084fc', '#93c5fd', '#86efac', '#f9a8d4']
+  const accents = ['#f9a8d4', '#86efac', '#c084fc', '#fdba74', '#93c5fd']
   const [accentIndex, setAccentIndex] = useState(0)
   const [hasHydrated, setHasHydrated] = useState(false)
   const accent = hasHydrated ? accents[accentIndex] : accents[0]
