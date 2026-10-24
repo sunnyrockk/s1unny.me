@@ -40,6 +40,7 @@ export function PortfolioShell() {
   const [accentIndex, setAccentIndex] = useState(0)
   const accent = accents[accentIndex]
   const [activeView, setActiveView] = useState<'about' | 'projects' | 'contributions'>('about')
+  const [mobileNavOpen, setMobileNavOpen] = useState(false)
   const [pointer, setPointer] = useState({ x: 50, y: 50 })
   const handlePointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
     setPointer({ x: (event.clientX / window.innerWidth) * 100, y: (event.clientY / window.innerHeight) * 100 })
@@ -55,6 +56,11 @@ export function PortfolioShell() {
   const showContributions = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault()
     setActiveView('contributions')
+    setMobileNavOpen(false)
+  }
+  const handleViewChange = (handler: (event: React.MouseEvent<HTMLAnchorElement>) => void) => (event: React.MouseEvent<HTMLAnchorElement>) => {
+    handler(event)
+    setMobileNavOpen(false)
   }
 
   return (
@@ -72,6 +78,12 @@ export function PortfolioShell() {
             </div>
           </div>
           <div className="top-actions">
+            <button className={`mobile-menu-toggle${mobileNavOpen ? ' is-open' : ''}`} type="button" onClick={() => setMobileNavOpen((open) => !open)} aria-expanded={mobileNavOpen} aria-controls="mobile-navigation">
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span className="sr-only">{mobileNavOpen ? 'Close navigation' : 'Open navigation'}</span>
+            </button>
             <nav className="socials" aria-label="Social links">
               {socials.map(({ label, href, icon: Icon, mark }) => <a key={label} href={href} aria-label={label} target={href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">{Icon ? <Icon size={17} strokeWidth={1.8} /> : <span className="social-mark">{mark}</span>}</a>)}
             </nav>
@@ -79,6 +91,11 @@ export function PortfolioShell() {
               <a className="resume-button" href="/resume.pdf" target="_blank" rel="noreferrer">resume <span aria-hidden="true">→</span></a>
             </div>
           </div>
+          <nav id="mobile-navigation" className={`mobile-navigation${mobileNavOpen ? ' is-open' : ''}`} aria-label="Mobile navigation">
+            <a href="/" onClick={handleViewChange(showAbout)} className={activeView === 'about' ? 'active' : ''}>/home</a>
+            <a href="/projects" onClick={handleViewChange(showProjects)} className={activeView === 'projects' ? 'active' : ''}>/projects</a>
+            <a href="#opensource" onClick={handleViewChange(showContributions)} className={activeView === 'contributions' ? 'active' : ''}>/contributions</a>
+          </nav>
         </header>
 
         {activeView === 'about' ? (
