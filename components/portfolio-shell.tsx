@@ -147,7 +147,6 @@ export function PortfolioShell() {
           </section>
         )}
 
-        <footer>built with intention <span>·</span> © 2026 sunny mall</footer>
       </main>
     </div>
   )
