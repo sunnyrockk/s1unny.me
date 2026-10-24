@@ -71,7 +71,7 @@ button { font: inherit; cursor: pointer; transition: color .25s ease, background
 @keyframes heading-flip-x { from { transform: rotateX(0deg); } to { transform: rotateX(360deg); } }
 @media (prefers-reduced-motion: reduce) { .interactive-heading.is-rotating { animation-duration: 1ms; } }
 .section-heading > span { color: var(--accent); font-size: 11px; opacity: .85; }
-.section-heading h1, .section-heading h2 { color: var(--accent); font-size: 24px; margin: 0; letter-spacing: -.08em; }
+.section-heading h1, .section-heading h2 { color: var(--accent); font-size: 24px; margin: 0; font-weight: 800; letter-spacing: -.08em; }
 .about-copy { max-width: 690px; margin-left: 37px; color: #eef2f7; font-size: 15px; line-height: 1.75; }
 .about-socials { display: none; align-items: center; gap: 13px; margin-top: 24px; color: var(--accent); }
 .about-socials a { width: 28px; height: 28px; display: grid; place-items: center; }
