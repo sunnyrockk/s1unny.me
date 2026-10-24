@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Sunny',
-  description: 'Sunny Mall personal portfolio.'
+  description: 'Sunny Mall personal portfolio.',
   generator: 'v0.app',
   icons: {
     icon: [
