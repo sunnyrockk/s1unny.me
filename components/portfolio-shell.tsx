@@ -156,11 +156,11 @@ export function PortfolioShell() {
               <p className="opensource-description">Aesthetic, minimalist platform for learning Japanese inspired by Duolingo and Monkeytype, built with Next.js and sponsored by Vercel.</p>
               <div className="opensource-meta"><span className="language-dot"></span><span>TypeScript</span><span className="star-mark">☆</span><span>1</span></div>
             </a>
+            <footer><span>© 2026 Sunny Mall</span><a href="https://github.com/sunnyrockk" target="_blank" rel="noreferrer">github.com/sunnyrockk</a></footer>
           </section>
         )}
 
       </main>
-      <footer><span>© 2026 Sunny Mall</span><a href="https://github.com/sunnyrockk" target="_blank" rel="noreferrer">github.com/sunnyrockk</a></footer>
     </div>
   )
 }
