@@ -3,6 +3,7 @@
 
 :root, body, button, input, textarea, select { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace; }
 * { box-sizing: border-box; }
+h1, h2, h3 { color: var(--accent); }
 html { scroll-behavior: smooth; }
 body { margin: 0; }
 a { color: inherit; text-decoration: none; cursor: pointer; transition: color .25s ease, background-color .25s ease, border-color .25s ease, opacity .25s ease, transform .25s ease; }
