@@ -147,6 +147,18 @@ export function PortfolioShell() {
           </section>
         )}
 
+        {activeView === 'about' && (
+          <section className="section opensource-section contributions-preview home-section">
+            <div className="section-heading project-heading"><h2>contribution</h2><a href="#opensource" onClick={showContributions}>view all →</a></div>
+            <a className="opensource-card" href="https://github.com/lingdojo/kana-dojo" target="_blank" rel="noreferrer">
+              <div className="opensource-card-top"><h3>kana-dojo</h3><span className="public-badge">Public</span></div>
+              <p className="forked-from">Forked from <u>lingdojo/kana-dojo</u></p>
+              <p className="opensource-description">Aesthetic, minimalist platform for learning Japanese inspired by Duolingo and Monkeytype, built with Next.js and sponsored by Vercel.</p>
+              <div className="opensource-meta"><span className="language-dot"></span><span>TypeScript</span><span className="star-mark">☆</span><span>1</span></div>
+            </a>
+          </section>
+        )}
+
       </main>
     </div>
   )
