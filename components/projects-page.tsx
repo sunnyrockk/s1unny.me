@@ -26,12 +26,11 @@ export function ProjectsPage() {
         </header>
 
         <section className="section projects-index-section">
-          <div className="section-heading"><span>02</span><h1>projects</h1></div>
+          <div className="section-heading"><h1>projects</h1></div>
           <p className="projects-intro">a collection of things i&apos;ve built, shaped, and learned from.</p>
           <div className="project-list project-list-page">
             {projects.map((project, index) => (
               <article className="project-row project-detail-row" key={project.name}>
-                <span className="project-index">0{index + 1}</span>
                 <div className="project-info"><h2>{project.name}</h2><p>{project.description}</p><small>{project.detail}</small></div>
                 <span className="language">{project.language}</span>
               </article>
@@ -40,7 +39,7 @@ export function ProjectsPage() {
         </section>
 
         <section className="section contact-section project-contact">
-          <div className="section-heading"><span>03</span><h2>contact</h2></div>
+          <div className="section-heading"><h2>contact</h2></div>
           <p>have a good idea or want to work together?</p>
           <a className="contact-link" href="mailto:sunnypratap859@gmail.com">sunnypratap859@gmail.com ↗</a>
           <a className="calendly-link" href="https://calendly.com/sunny-mall" target="_blank" rel="noreferrer">book a meeting <span>↗</span></a>

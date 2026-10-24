@@ -18,12 +18,12 @@ function LeetcodeMark({ size = 17 }: { size?: number }) {
   return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m16 17-4 4-4-4" /><path d="M12 3v18" /><path d="M7 8 3 12l4 4" /><path d="m17 8 4 4-4 4" /></svg>
 }
 
-function ClickableHeading({ index, children, level = 'h2' }: { index: string; children: string; level?: 'h1' | 'h2' }) {
+function ClickableHeading({ children, level = 'h2' }: { children: string; level?: 'h1' | 'h2' }) {
   const [isRotating, setIsRotating] = useState(false)
   const Heading = level
 
   return <button className={`section-heading interactive-heading${isRotating ? ' is-rotating' : ''}`} type="button" onClick={() => { setIsRotating(false); requestAnimationFrame(() => setIsRotating(true)) }} onAnimationEnd={() => setIsRotating(false)} aria-label={`Rotate ${children} heading`}>
-    <span>{index}</span><Heading>{children}</Heading>
+    <Heading>{children}</Heading>
   </button>
 }
 
@@ -100,7 +100,7 @@ export function PortfolioShell() {
 
         {activeView === 'about' ? (
           <section id="about" className="section about-section home-section">
-            <ClickableHeading index="01" level="h1">about</ClickableHeading>
+            <ClickableHeading level="h1">about</ClickableHeading>
             <div className="about-copy">
               <p>20 y/o cs undergrad.</p>
               <p>i build things i wish existed, and they often end up being useful to other people too.</p>
@@ -113,7 +113,7 @@ export function PortfolioShell() {
           </section>
         ) : activeView === 'contributions' ? (
           <section id="opensource" className="section opensource-section about-replacement">
-            <div className="section-heading project-heading"><span>03</span><h1>open source contributions</h1><a href="#about" onClick={showAbout}>back to about →</a></div>
+            <div className="section-heading project-heading"><h1>open source contributions</h1><a href="#about" onClick={showAbout}>back to about →</a></div>
             <a className="opensource-card" href="https://github.com/lingdojo/kana-dojo" target="_blank" rel="noreferrer">
               <div className="opensource-card-top"><h3>kana-dojo</h3><span className="public-badge">Public</span></div>
               <p className="forked-from">Forked from <u>lingdojo/kana-dojo</u></p>
@@ -123,18 +123,18 @@ export function PortfolioShell() {
           </section>
         ) : (
           <section id="projects" className="section projects-section about-replacement">
-            <div className="section-heading project-heading"><span>02</span><h1>projects</h1><a href="#about" onClick={showAbout}>back to about →</a></div>
+            <div className="section-heading project-heading"><h1>projects</h1><a href="#about" onClick={showAbout}>back to about →</a></div>
             <div className="project-list">
-              {projects.map((project, index) => <a className="project-row" href="#opensource" key={project.name}><span className="project-index">0{index + 1}</span><div className="project-info"><h3>{project.name}</h3><p>{project.description}</p></div><span className="language">{project.language}</span></a>)}
+              {projects.map((project, index) => <a className="project-row" href="#opensource" key={project.name}><div className="project-info"><h3>{project.name}</h3><p>{project.description}</p></div><span className="language">{project.language}</span></a>)}
             </div>
           </section>
         )}
 
         {activeView === 'about' && (
           <section className="section projects-section projects-preview home-section">
-            <div className="section-heading project-heading"><span>02</span><h2>projects</h2><a href="/projects" onClick={showProjects}>view all →</a></div>
+            <div className="section-heading project-heading"><h2>projects</h2><a href="/projects" onClick={showProjects}>view all →</a></div>
             <div className="project-list">
-              {projects.map((project, index) => <a className="project-row" href="#opensource" key={project.name}><span className="project-index">0{index + 1}</span><div className="project-info"><h3>{project.name}</h3><p>{project.description}</p></div><span className="language">{project.language}</span></a>)}
+              {projects.map((project, index) => <a className="project-row" href="#opensource" key={project.name}><div className="project-info"><h3>{project.name}</h3><p>{project.description}</p></div><span className="language">{project.language}</span></a>)}
             </div>
           </section>
         )}
