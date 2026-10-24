@@ -74,8 +74,8 @@ export function PortfolioShell() {
 
   return (
     <div className="site-shell theme-dark" onPointerMove={handlePointerMove} style={{ '--accent': accent, '--matrix-primary': accent, '--matrix-secondary': secondaryAccent, '--pointer-x': `${pointer.x}%`, '--pointer-y': `${pointer.y}%` } as React.CSSProperties}>
-      <div className="matrix-bg" aria-hidden="true" />
       <main className="portfolio">
+        <div className="matrix-bg" aria-hidden="true" />
         <header className="topbar">
           <div className="identity">
             <a className="avatar" href="#about" aria-label="Go to about section">
