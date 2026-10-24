@@ -81,7 +81,7 @@ export function PortfolioShell() {
             </a>
             <div>
               <a className="name" href="#about" onClick={showAbout}>sunny mall</a>
-              <div className="breadcrumbs"><a className={activeView === 'about' ? 'active' : ''} href="/" onClick={showAbout}>/home</a><a className={activeView === 'projects' ? 'active' : ''} href="/projects" onClick={showProjects}>/projects</a><a className={activeView === 'contributions' ? 'active' : ''} href="#opensource" onClick={showContributions}>/contributions</a><button className="accent-toggle" type="button" onClick={() => setAccentIndex((index) => (index + 1) % accents.length)} aria-label="Change accent color">{accent}</button></div>
+              <div className="breadcrumbs"><a className={activeView === 'about' ? 'active' : ''} href="/" onClick={showAbout}>/home</a><a className={activeView === 'projects' ? 'active' : ''} href="/projects" onClick={showProjects}>/projects</a><a className={activeView === 'contributions' ? 'active' : ''} href="#opensource" onClick={showContributions}>/contribution</a><button className="accent-toggle" type="button" onClick={() => setAccentIndex((index) => (index + 1) % accents.length)} aria-label="Change accent color">{accent}</button></div>
             </div>
           </div>
           <div className="top-actions">
@@ -101,7 +101,7 @@ export function PortfolioShell() {
           <nav id="mobile-navigation" className={`mobile-navigation${mobileNavOpen ? ' is-open' : ''}`} aria-label="Mobile navigation">
             <a href="/" onClick={handleViewChange(showAbout)} className={activeView === 'about' ? 'active' : ''}>/home</a>
             <a href="/projects" onClick={handleViewChange(showProjects)} className={activeView === 'projects' ? 'active' : ''}>/projects</a>
-            <a href="#opensource" onClick={handleViewChange(showContributions)} className={activeView === 'contributions' ? 'active' : ''}>/contributions</a>
+            <a href="#opensource" onClick={handleViewChange(showContributions)} className={activeView === 'contributions' ? 'active' : ''}>/contribution</a>
           </nav>
         </header>
 
