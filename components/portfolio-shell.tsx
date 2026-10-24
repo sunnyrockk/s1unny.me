@@ -16,6 +16,10 @@ function DiscordMark({ size = 17 }: { size?: number }) {
   return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 5.2A16.2 16.2 0 0 0 15 4l-.5 1a14.3 14.3 0 0 0-5 0L9 4a16.2 16.2 0 0 0-3.9 1.2C2.6 8.8 1.9 12.3 2.2 15.8a16 16 0 0 0 4.8 2.4l1.2-1.6c-.7-.3-1.3-.7-1.9-1.1l.5-.4a11.5 11.5 0 0 0 10.4 0l.5.4c-.6.4-1.2.8-1.9 1.1l1.2 1.6a16 16 0 0 0 4.8-2.4c.4-4.1-.7-7.6-2.9-10.6ZM8.8 14.1c-.9 0-1.6-.8-1.6-1.8s.7-1.8 1.6-1.8 1.6.8 1.6 1.8-.7 1.8-1.6 1.8Zm6.4 0c-.9 0-1.6-.8-1.6-1.8s.7-1.8 1.6-1.8 1.6.8 1.6 1.8-.7 1.8-1.6 1.8Z" /></svg>
 }
 
+function LeetcodeMark({ size = 17 }: { size?: number }) {
+  return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M13.2 2.2 5.7 9.7a6.05 6.05 0 0 0 0 8.6l2.8 2.8a6.05 6.05 0 0 0 8.6 0l4.1-4.1-1.4-1.4-4.1 4.1a4.05 4.05 0 0 1-5.8 0l-2.8-2.8a4.05 4.05 0 0 1 0-5.8l7.5-7.5a2.1 2.1 0 0 1 3 3l-7.2 7.2 1.4 1.4 7.2-7.2a4.1 4.1 0 0 0-5.8-5.8Z"/><path d="M10 12h9v2h-9z"/></svg>
+}
+
 function ClickableHeading({ children, level = 'h2' }: { children: string; level?: 'h1' | 'h2' }) {
   const [isRotating, setIsRotating] = useState(false)
   const Heading = level
@@ -28,6 +32,7 @@ function ClickableHeading({ children, level = 'h2' }: { children: string; level?
 const socials = [
   { label: 'github', href: 'https://github.com/sunnyrockk', icon: GithubMark },
   { label: 'discord', href: 'https://discord.com', icon: DiscordMark },
+  { label: 'leetcode', href: 'https://leetcode.com', icon: LeetcodeMark },
   { label: 'linkedin', href: 'https://www.linkedin.com', mark: 'in' },
   { label: 'x', href: 'https://x.com/SunnyPrata19874', mark: '𝕏' },
 ]
