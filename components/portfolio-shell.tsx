@@ -83,7 +83,7 @@ export function PortfolioShell() {
             </a>
             <div>
               <a className="name" style={{ color: accent }} href="#about" onClick={showAbout}>sunny mall</a>
-              <div className="breadcrumbs"><a className={activeView === 'about' ? 'active' : ''} href="/" onClick={showAbout}>/home</a><a className={activeView === 'projects' ? 'active' : ''} href="/projects" onClick={showProjects}>/projects</a><a className={`desktop-contribution${activeView === 'contributions' ? ' active' : ''}`} href="#opensource" onClick={handleViewChange(showContributions)}>/contribution</a><button style={{ color: accent }} className="accent-toggle" type="button" onClick={() => setAccentIndex((index) => (index + 1) % accents.length)} aria-label="Change accent color">{accent}</button></div>
+              <div className="breadcrumbs"><a style={{ color: accent }} className={activeView === 'about' ? 'active' : ''} href="/" onClick={showAbout}>/home</a><a style={{ color: accent }} className={activeView === 'projects' ? 'active' : ''} href="/projects" onClick={showProjects}>/projects</a><a style={{ color: accent }} className={`desktop-contribution${activeView === 'contributions' ? ' active' : ''}`} href="#opensource" onClick={handleViewChange(showContributions)}>/contribution</a><button style={{ color: accent }} className="accent-toggle" type="button" onClick={() => setAccentIndex((index) => (index + 1) % accents.length)} aria-label="Change accent color">{accent}</button></div>
             </div>
           </div>
           <div className="top-actions">
