@@ -83,7 +83,7 @@ export function PortfolioShell() {
             </a>
             <div>
               <a className="name" href="#about" onClick={showAbout}>sunny mall</a>
-              <div className="breadcrumbs"><a className={activeView === 'about' ? 'active' : ''} href="/" onClick={showAbout}>/home</a><a className={activeView === 'projects' ? 'active' : ''} href="/projects" onClick={showProjects}>/projects</a><a className={activeView === 'contributions' ? 'active' : ''} href="#opensource" onClick={showContributions}>/contribution</a><button className="accent-toggle" type="button" onClick={() => setAccentIndex((index) => (index + 1) % accents.length)} aria-label="Change accent color">{accent}</button></div>
+              <div className="breadcrumbs"><a className={activeView === 'about' ? 'active' : ''} href="/" onClick={showAbout}>/home</a><a className={activeView === 'projects' ? 'active' : ''} href="/projects" onClick={showProjects}>/projects</a><button className="accent-toggle" type="button" onClick={() => setAccentIndex((index) => (index + 1) % accents.length)} aria-label="Change accent color">{accent}</button></div>
             </div>
           </div>
           <div className="top-actions">
