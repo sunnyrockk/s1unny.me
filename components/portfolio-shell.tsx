@@ -108,7 +108,7 @@ export function PortfolioShell() {
         </header>
 
         {activeView === 'about' ? (
-          <section id="about" className="section about-section home-section">
+          <section key="about-view" id="about" className="section about-section home-section">
             <ClickableHeading level="h1">about</ClickableHeading>
             <div className="about-copy">
               <p>20 y/o cs undergrad.</p>
@@ -120,7 +120,7 @@ export function PortfolioShell() {
             </div>
           </section>
         ) : activeView === 'contributions' ? (
-          <section id="opensource" className="section opensource-section about-replacement">
+          <section key="contributions-view" id="opensource" className="section opensource-section about-replacement">
             <div className="section-heading project-heading"><h1>open source contributions</h1><a href="#about" onClick={showAbout}>back to about →</a></div>
             <a className="opensource-card" href="https://github.com/lingdojo/kana-dojo" target="_blank" rel="noreferrer">
               <div className="opensource-card-top"><h3>kana-dojo</h3><span className="public-badge">Public</span></div>
@@ -130,7 +130,7 @@ export function PortfolioShell() {
             </a>
           </section>
         ) : (
-          <section id="projects" className="section projects-section about-replacement">
+          <section key="projects-view" id="projects" className="section projects-section about-replacement">
             <div className="section-heading project-heading"><h1>projects</h1><a href="#about" onClick={showAbout}>back to about →</a></div>
             <div className="project-list">
               {projects.map((project, index) => <a className="project-row" href="#opensource" key={project.name}><div className="project-info"><h3>{project.name}</h3><p>{project.description}</p></div><span className="language">{project.language}</span></a>)}
